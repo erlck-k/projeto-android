@@ -1,0 +1,210 @@
+@charset "UTF-8";
+
+/*
+Declaração da tabela de cores utilizadas no site, e familia de fontes.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'Android';
+    src: url(../fontes/idroid.otf) format('opentype');
+    font-weight: normal;
+}
+
+/* Declarações globais em CSS se fazem dentro de um seletor '*' */
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+:root{
+    --color0: #ebe5c5;
+    --color1: #5CC46F;
+    --color2: #65da6b;
+    --color3: #418644;
+    --color4: #31612c;
+    --color5: #1f3f1c;
+
+    --font-body: Arial, Verdana, Helvetica, sans-serif;
+    --font-index: 'Bebas Neue', cursive;
+    --font-android: 'Android', cursive;
+}
+
+body{
+    background-color: var(--color0);
+    font-family: var(--font-body);
+}
+
+a.externo::after{
+    content: '\1F517';
+}
+
+header{
+    background-image: linear-gradient(to bottom, var(--color3), var(--color5));
+    color: white;
+    font-weight: normal;
+    text-align: center;
+    padding-top: 40px;
+    min-height: 150px;
+}
+
+header > h1{
+    font-family: var(--font-index);
+    font-size: 2.5em;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.479);
+    font-weight: normal;
+}
+
+header > p{
+    color: white;
+    font-size: 1.3em;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
+    margin-bottom: 30px;
+    max-width: 500px;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.479);
+}
+
+nav{
+    background-color: var(--color5);
+    font-weight: bold;
+    padding: 10px;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.123);
+}
+
+nav > a{
+    color: var(--color1);
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    transition-duration: .7s;
+}
+
+nav > a:hover{
+    color: var(--color2);
+    text-decoration: underline;
+    background-color: var(--color4);
+}
+
+main{
+    background-color: white;
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.158);
+
+    min-width: 350px;
+    max-width: 1000px;
+}
+
+main h1{
+   font-family: var(--font-android);
+   color: var(--color5);              
+   font-size: 1.8em;        
+   font-weight: normal;                         
+}
+
+main h2{
+    background-image: linear-gradient(to right, var(--color1), transparent);
+    font-family: var(--font-android);
+    color: var(--color5);
+    padding: 5px;
+    font-weight: normal;
+}
+
+main p{
+    text-align: justify;
+    margin: 10px 0px;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    text-indent: 1.5em;
+}
+
+main strong{
+    color: var(--color5);
+    font-weight: bolder;
+}
+
+main a{
+    text-decoration: none;
+    color: var(--color4);
+    background-color: var(--color1);
+}
+
+main a:hover{
+    text-decoration: underline;
+    color: var(--color3);
+}
+main img{
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+main img.pequena{
+    max-width: 35%;
+}
+
+div.video{
+    background-color: var(--color4);
+    padding: 20px;
+    padding-bottom: 58%;
+    margin: 0px -20px 30px -20px;
+    position: relative;
+}
+
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+aside{
+    background-color: var(--color1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.404);
+}
+
+aside > h3{
+    background-color: var(--color4);
+    color: white;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+    margin: -10px;
+}
+
+aside > ul{
+    list-style-position: inside;
+    list-style-type: '\2714\00A0\00A0';
+    columns: 2;
+}
+
+footer{
+    background-color: var(--color5);
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    padding: 3px;
+    border-radius: 3px;
+    font-weight: bold;
+    transition-duration: 0.7s;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: var(--color2);
+}
